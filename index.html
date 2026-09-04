@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — FindMyLifer</title>
+<meta name="description" content="Privacy policy for FindMyLifer, an independent iOS birding app built on the eBird API.">
+<style>
+  :root { --ink:#2b3a30; --muted:#5d6b60; --sage:#6f8f72; --bg:#f7f5ef; --card:#ffffff; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:720px; margin:0 auto; padding:48px 22px 80px; }
+  h1 { font-family:"New York",Georgia,"Times New Roman",serif; font-size:30px; margin:0 0 4px; }
+  .updated { color:var(--muted); font-size:14px; margin:0 0 28px; }
+  h2 { font-family:"New York",Georgia,serif; font-size:20px; margin:34px 0 8px; }
+  h3 { font-size:16px; margin:20px 0 4px; }
+  a { color:var(--sage); }
+  ul { padding-left:20px; }
+  .card { background:var(--card); border:1px solid rgba(0,0,0,0.06); border-radius:16px;
+    padding:6px 26px 26px; box-shadow:0 6px 24px rgba(43,58,48,0.06); }
+  footer { margin-top:36px; font-size:13px; color:var(--muted); text-align:center; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Privacy Policy — FindMyLifer</h1>
+      <p class="updated">Last updated: 2026-09-04</p>
+    </header>
+    <div class="card">
+      <p>FindMyLifer ("the app") helps birders find recent sightings of species they have not yet seen. We are committed to protecting your privacy. This policy explains what data the app uses, how it is used, and what is and is not transmitted off your device.</p>
+
+      <h2>Information the app uses</h2>
+
+      <h3>Location</h3>
+      <p>The app requests access to your device location while in use. Your location is sent to the <a href="https://ebird.org/api/keygen">eBird API</a> (operated by the Cornell Lab of Ornithology) to retrieve nearby bird sightings and hotspots.</p>
+      <ul>
+        <li>We do <strong>not</strong> store your location on our servers — the app has no servers of its own.</li>
+        <li>We do <strong>not</strong> link your location to your identity.</li>
+        <li>We do <strong>not</strong> track your location in the background.</li>
+        <li>We do <strong>not</strong> share your location with advertising networks or analytics providers.</li>
+      </ul>
+      <p>The eBird API receives your latitude and longitude as part of standard search queries. eBird's <a href="https://ebird.org/api/terms">Terms of Use</a> govern their handling of that data.</p>
+
+      <h3>Life list (CSV import)</h3>
+      <p>If you choose to import your eBird life list, the file is parsed on your device and the species codes are stored locally in iOS UserDefaults. The CSV is <strong>not</strong> uploaded anywhere.</p>
+
+      <h3>Bird images</h3>
+      <p>Photos shown in the app are fetched from the Cornell Lab Macaulay Library media CDN. Standard HTTP request metadata (IP address, user agent) is visible to Cornell Lab as part of those requests. No identifying information is sent.</p>
+
+      <h2>Information we do NOT collect</h2>
+      <ul>
+        <li>We do not run any analytics or telemetry today.</li>
+        <li>We do not show ads.</li>
+        <li>We do not collect device identifiers, contacts, photos, or health data.</li>
+        <li>We do not have user accounts or sign-in.</li>
+        <li>We do not sell your data, and we never will — there is nothing to sell, since we don't collect anything beyond what's described above.</li>
+      </ul>
+
+      <h2>Your data, your control</h2>
+      <ul>
+        <li><strong>Location permission</strong> can be granted, changed, or revoked anytime in iOS Settings → Privacy &amp; Security → Location Services → FindMyLifer.</li>
+        <li><strong>Deleting the app</strong> removes all locally stored data (your imported life list, cached taxonomy, preferences) from your device. We have no servers, so there is nothing left behind for us to delete on your behalf.</li>
+      </ul>
+
+      <h2>Children's privacy</h2>
+      <p>The app is not directed at children under 13 and we do not knowingly collect any personal information from them.</p>
+
+      <h2>Third parties</h2>
+      <ul>
+        <li><strong>Cornell Lab of Ornithology / eBird:</strong> receives your location coordinates and API request metadata when you search for sightings. See <a href="https://ebird.org/api/terms">eBird's API Terms of Use</a>.</li>
+        <li><strong>Cornell Lab Macaulay Library:</strong> serves bird photos directly to your device.</li>
+      </ul>
+
+      <h2>Changes to this policy</h2>
+      <p>If we change this policy in a way that affects how your data is handled, we will update this page and the "Last updated" date above. Material changes will also be surfaced in-app.</p>
+
+      <h2>Contact</h2>
+      <p>For questions about this policy, please open an issue at <a href="https://github.com/SchoolGangsta/FindMyLifer/issues">github.com/SchoolGangsta/FindMyLifer/issues</a>.</p>
+    </div>
+    <footer>FindMyLifer · Data provided by eBird (Cornell Lab of Ornithology). FindMyLifer is independent and not affiliated with the Cornell Lab.</footer>
+  </div>
+</body>
+</html>
