@@ -27,7 +27,7 @@
   <div class="wrap">
     <header>
       <h1>Privacy Policy — FindMyLifer</h1>
-      <p class="updated">Last updated: 2026-09-04</p>
+      <p class="updated">Last updated: 2026-09-05</p>
     </header>
     <div class="card">
       <p>FindMyLifer ("the app") helps birders find recent sightings of species they have not yet seen. We are committed to protecting your privacy. This policy explains what data the app uses, how it is used, and what is and is not transmitted off your device.</p>
@@ -35,20 +35,20 @@
       <h2>Information the app uses</h2>
 
       <h3>Location</h3>
-      <p>The app requests access to your device location while in use. Your location is sent to the <a href="https://ebird.org/api/keygen">eBird API</a> (operated by the Cornell Lab of Ornithology) to retrieve nearby bird sightings and hotspots.</p>
+      <p>The app requests access to your device location while in use. To retrieve nearby bird sightings and hotspots, your location is sent to our own lightweight backend proxy, which forwards the request to the <a href="https://ebird.org/api/keygen">eBird API</a> (operated by the Cornell Lab of Ornithology) using our server-side API credentials. The proxy exists solely to keep those credentials off your device — it is not a database and does not require an account.</p>
       <ul>
-        <li>We do <strong>not</strong> store your location on our servers — the app has no servers of its own.</li>
+        <li>Our proxy relays your location to eBird to complete each search; it does not log, store, or retain your location beyond what's needed to forward that one request.</li>
         <li>We do <strong>not</strong> link your location to your identity.</li>
         <li>We do <strong>not</strong> track your location in the background.</li>
         <li>We do <strong>not</strong> share your location with advertising networks or analytics providers.</li>
       </ul>
-      <p>The eBird API receives your latitude and longitude as part of standard search queries. eBird's <a href="https://ebird.org/api/terms">Terms of Use</a> govern their handling of that data.</p>
+      <p>The eBird API receives your latitude and longitude as part of standard search queries (via our proxy, not directly from your device). eBird's <a href="https://ebird.org/api/terms">Terms of Use</a> govern their handling of that data.</p>
 
       <h3>Life list (CSV import)</h3>
       <p>If you choose to import your eBird life list, the file is parsed on your device and the species codes are stored locally in iOS UserDefaults. The CSV is <strong>not</strong> uploaded anywhere.</p>
 
       <h3>Bird images</h3>
-      <p>Photos shown in the app are fetched from the Cornell Lab Macaulay Library media CDN. Standard HTTP request metadata (IP address, user agent) is visible to Cornell Lab as part of those requests. No identifying information is sent.</p>
+      <p>Photos shown in the app are fetched from the public <a href="https://api.inaturalist.org">iNaturalist API</a> (operated by the California Academy of Sciences and National Geographic Society), filtered to species-page and community-submitted photos under commercially-safe open licenses (CC0, CC-BY, CC-BY-SA). Standard HTTP request metadata (IP address, user agent) is visible to iNaturalist as part of those requests. No identifying information is sent.</p>
 
       <h2>Information we do NOT collect</h2>
       <ul>
@@ -62,7 +62,7 @@
       <h2>Your data, your control</h2>
       <ul>
         <li><strong>Location permission</strong> can be granted, changed, or revoked anytime in iOS Settings → Privacy &amp; Security → Location Services → FindMyLifer.</li>
-        <li><strong>Deleting the app</strong> removes all locally stored data (your imported life list, cached taxonomy, preferences) from your device. We have no servers, so there is nothing left behind for us to delete on your behalf.</li>
+        <li><strong>Deleting the app</strong> removes all locally stored data (your imported life list, cached taxonomy, preferences) from your device. We have no user accounts or databases tied to your identity, so there is nothing left behind for us to delete on your behalf.</li>
       </ul>
 
       <h2>Children's privacy</h2>
@@ -70,8 +70,9 @@
 
       <h2>Third parties</h2>
       <ul>
-        <li><strong>Cornell Lab of Ornithology / eBird:</strong> receives your location coordinates and API request metadata when you search for sightings. See <a href="https://ebird.org/api/terms">eBird's API Terms of Use</a>.</li>
-        <li><strong>Cornell Lab Macaulay Library:</strong> serves bird photos directly to your device.</li>
+        <li><strong>Cornell Lab of Ornithology / eBird:</strong> receives your location coordinates and API request metadata (relayed through our proxy) when you search for sightings. See <a href="https://ebird.org/api/terms">eBird's API Terms of Use</a>.</li>
+        <li><strong>iNaturalist</strong> (California Academy of Sciences / National Geographic Society): serves bird photos directly to your device.</li>
+        <li><strong>Our backend proxy:</strong> a small server we operate solely to keep our eBird API credentials off your device. It forwards your search requests to eBird and does not maintain user accounts or a database of your activity.</li>
       </ul>
 
       <h2>Changes to this policy</h2>
