@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Support — FindMyLifer</title>
+<meta name="description" content="Support and contact information for FindMyLifer, an independent iOS birding app built on the eBird API.">
+<style>
+  :root { --ink:#2b3a30; --muted:#5d6b60; --sage:#6f8f72; --bg:#f7f5ef; --card:#ffffff; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:720px; margin:0 auto; padding:48px 22px 80px; }
+  h1 { font-family:"New York",Georgia,"Times New Roman",serif; font-size:30px; margin:0 0 4px; }
+  .updated { color:var(--muted); font-size:14px; margin:0 0 28px; }
+  h2 { font-family:"New York",Georgia,serif; font-size:20px; margin:34px 0 8px; }
+  h3 { font-size:16px; margin:20px 0 4px; }
+  a { color:var(--sage); }
+  ul { padding-left:20px; }
+  .card { background:var(--card); border:1px solid rgba(0,0,0,0.06); border-radius:16px;
+    padding:6px 26px 26px; box-shadow:0 6px 24px rgba(43,58,48,0.06); }
+  .button { display:inline-block; margin-top:6px; padding:12px 20px; border-radius:100px;
+    background:var(--sage); color:#fff; text-decoration:none; font-weight:600; }
+  footer { margin-top:36px; font-size:13px; color:var(--muted); text-align:center; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Support — FindMyLifer</h1>
+      <p class="updated">Need help with the app? Start here.</p>
+    </header>
+    <div class="card">
+      <h2>Contact</h2>
+      <p>The fastest way to reach the developer is email:</p>
+      <p><a class="button" href="mailto:vladyslav.mazan@gmail.com">Email vladyslav.mazan@gmail.com</a></p>
+      <p>You can also file a bug or feature request on GitHub: <a href="https://github.com/SchoolGangsta/FindMyLifer/issues">github.com/SchoolGangsta/FindMyLifer/issues</a>.</p>
+
+      <h2>Common questions</h2>
+
+      <h3>Discovery isn't finding any lifers nearby</h3>
+      <p>Try increasing the search radius or days-back window from the location chip on the Discover tab. Recent sightings depend entirely on what other birders have reported to eBird in your area — sparse regions will naturally show fewer results.</p>
+
+      <h3>My life list count looks wrong after importing</h3>
+      <p>Make sure you imported <code>MyEBirdData.csv</code> from <a href="https://ebird.org/downloadMyData">ebird.org/downloadMyData</a>. eBird sends this as a <code>.zip</code> — tap it in the Files app to extract the CSV automatically, then import that file from Settings.</p>
+
+      <h3>Bird photos aren't loading</h3>
+      <p>Photos are sourced from the public iNaturalist API and require a network connection. If you're offline, the app shows a placeholder until you reconnect.</p>
+
+      <h3>Where does the sighting data come from?</h3>
+      <p>Live sightings come from the <a href="https://ebird.org/api/keygen">eBird API</a> (Cornell Lab of Ornithology). FindMyLifer is an independent app and is not produced by or affiliated with the Cornell Lab.</p>
+
+      <h2>Privacy</h2>
+      <p>See the <a href="https://schoolgangsta.github.io/FindMyLiferPolicy/">Privacy Policy</a> for details on what data the app uses.</p>
+    </div>
+    <footer>FindMyLifer — an independent app, not affiliated with the Cornell Lab of Ornithology or eBird.</footer>
+  </div>
+</body>
+</html>
