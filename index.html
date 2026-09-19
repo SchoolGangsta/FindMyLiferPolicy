@@ -27,7 +27,7 @@
   <div class="wrap">
     <header>
       <h1>Privacy Policy — FindMyLifer</h1>
-      <p class="updated">Last updated: 2026-09-18</p>
+      <p class="updated">Last updated: 2026-09-19</p>
     </header>
     <div class="card">
       <p>FindMyLifer ("the app") helps birders find recent sightings of species they have not yet seen. We are committed to protecting your privacy. This policy explains what data the app uses, how it is used, and what is and is not transmitted off your device.</p>
@@ -55,7 +55,9 @@
       <p><strong>iCloud sync.</strong> If you are signed in to iCloud, your life list (species codes and first-seen dates) is automatically mirrored to your private iCloud Key-Value storage so it survives reinstalling the app and syncs between your iPhones. It lives in your own iCloud account under Apple's terms; it is never sent to our proxy, and we have no access to it. Signing out of iCloud stops syncing; the list stays on the device.</p>
 
       <h3>Bird images</h3>
-      <p>Photos shown in the app are fetched from the public <a href="https://api.inaturalist.org">iNaturalist API</a> (operated by the California Academy of Sciences and National Geographic Society), filtered to species-page and community-submitted photos under open Creative Commons licenses (CC0, CC BY, CC BY-SA, CC BY-NC, CC BY-NC-SA); the photographer's credit is shown on the species detail screen. When no suitably licensed photo exists for a species, the app shows a generic bird photo loaded from <a href="https://unsplash.com">Unsplash</a>. Standard HTTP request metadata (IP address, user agent) is visible to iNaturalist, and to Unsplash when that fallback photo is shown, as part of those requests. No identifying information is sent.</p>
+      <p>Photos shown in the app are openly licensed photos from <a href="https://api.inaturalist.org">iNaturalist</a> (operated by the California Academy of Sciences and National Geographic Society): species-page and community-submitted photos under Creative Commons licenses (CC0, CC BY, CC BY-SA, CC BY-NC, CC BY-NC-SA). The photographer's credit is shown on the species detail screen, marked &ldquo;cropped&rdquo; because the app crops photos to fit.</p>
+      <p><strong>Our photo server.</strong> The main photo of most species is a copy we host on our own photo server (<code>photos.findmylifer.xyz</code>), resized and cropped from the iNaturalist original. About once a day the app downloads the list of those photos, and it downloads the photos themselves as you browse. While it handles each request, the photo server sees your device's IP address, its user agent and which photo is requested. It keeps no access logs and no record of who viewed which photos; only a request that fails with a server error may be recorded in the server's system log. No identifying information is sent.</p>
+      <p>The other photos of a species, and any species we have no copy for, come directly from iNaturalist. When no suitably licensed photo exists for a species, the app shows a generic bird photo loaded from <a href="https://unsplash.com">Unsplash</a>. Standard HTTP request metadata (IP address, user agent) is visible to iNaturalist, and to Unsplash when that fallback photo is shown, as part of those requests.</p>
 
       <h3>Directions and links you open</h3>
       <p>When you ask for directions to a sighting, the app opens Apple Maps, Google Maps or Waze — whichever you pick — with the coordinates of the <strong>sighting</strong>, not your own location. "View on eBird" and checklist links open ebird.org. What those apps and sites do with your visit is governed by their own privacy policies.</p>
@@ -87,6 +89,7 @@
         <li><strong>Apple:</strong> MapKit maps, place-name lookup and place search; iCloud storage for life-list sync if you use iCloud.</li>
         <li><strong>Google Maps / Waze:</strong> only if you choose one of them for directions; they receive the sighting's coordinates.</li>
         <li><strong>Our backend proxy:</strong> a small server we operate solely to keep our eBird API credentials off your device. It forwards your search requests to eBird, briefly caches eBird's public responses as described above, and does not maintain user accounts or a database of your activity.</li>
+        <li><strong>Our photo server:</strong> a static file server we operate, serving our copies of openly licensed iNaturalist photos and the list of them. No accounts, no access logs.</li>
       </ul>
 
       <h2>Changes to this policy</h2>
